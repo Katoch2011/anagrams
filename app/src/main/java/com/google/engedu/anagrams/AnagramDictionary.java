@@ -111,7 +111,8 @@ public class AnagramDictionary {
         ArrayList<String> starter;
 
         while(true){
-            starter=sizeToWords.get(DEFAULT_WORD_LENGTH+(DEFAULT_WORD_LENGTH+((i++)%(MAX_WORD_LENGTH-DEFAULT_WORD_LENGTH))));
+            i=i%(MAX_WORD_LENGTH-DEFAULT_WORD_LENGTH);
+            starter=sizeToWords.get(DEFAULT_WORD_LENGTH+(i++));
             int rand=new Random().nextInt(starter.size());
 
             word=starter.get(rand);
